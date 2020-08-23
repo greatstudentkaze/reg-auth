@@ -22,9 +22,17 @@ const render = function () {
                       </p>
                       <p class="user__option">
                         Зарегистрирован: <span class="user__reg-date">${item.regDate}</span>
-                      </p>`;
+                      </p>
+                      <button class="user__remove js-remove-user">Удалить</button>`;
 
     userLogList.append(elem);
+
+    const userRemoveBtn = elem.querySelector('.js-remove-user');
+    userRemoveBtn.addEventListener('click', function () {
+      userLog.splice(userLog.indexOf(item), 1);
+      localStorage.setItem('user-log', JSON.stringify(userLog));
+      render();
+    });
   });
 };
 
