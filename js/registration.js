@@ -6,6 +6,16 @@ const regBtn = document.querySelector('.js-reg'),
 
 const userLog = JSON.parse(localStorage.getItem('user-log')) || [];
 
+const isUserFound = function (userName) {
+  let isUserFound = false;
+
+  userLog.forEach(function (item) {
+    if (item.userName === userName) isUserFound = true;
+  });
+
+  return isUserFound;
+}
+
 const render = function () {
   if (userLog.length === 0) userLogList.textContent = 'Нет зарегистрированных пользователей :(';
   else userLogList.textContent = '';
@@ -48,7 +58,7 @@ regBtn.addEventListener('click', function () {
   do {
     username = prompt('Введите логин', 's4nyan0j');
     if (username === null) return ;
-  } while (!/^\S+$/.test(username.trim()));
+  } while (!/^\S+$/.test(username.trim()) || isUserFound(username));
 
   do {
     password = prompt('Введите пароль', 'gr34tp4ss!337');
