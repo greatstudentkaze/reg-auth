@@ -33,7 +33,7 @@ const render = function () {
                       <p class="user__option">
                         Зарегистрирован: <span class="user__reg-date">${item.regDate}</span>
                       </p>
-                      <button class="user__remove js-remove-user">Удалить</button>`;
+                      <button class="button user__remove js-remove-user">Удалить</button>`;
 
     userLogList.append(elem);
 

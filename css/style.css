@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+img {
+  max-width: 100%; }
+
+html,
+body {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #222222;
+  background-color: #ffffff;
+  cursor: default; }
+
+.container {
+  position: relative;
+  padding: 0 20px; }
+  @media (min-width: 768px) {
+    .container {
+      margin: 0 auto;
+      padding: 0 30px; } }
+  @media (min-width: 1260px) {
+    .container {
+      width: 1220px;
+      padding: 0 20px; } }
+
+.button {
+  display: inline-block;
+  padding: 0 20px;
+  font: inherit;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: normal;
+  color: #ffffff;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+  border: none;
+  background-color: #82899b;
+  cursor: pointer;
+  transition: background-color, box-shadow 0.3s; }
+  .button:hover, .button:focus {
+    background-color: #686f82;
+    outline: none;
+    box-shadow: 0 0 0 2px #686f82; }
+  .button:active {
+    color: rgba(255, 255, 255, 0.3); }
+
+.main {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.greeting {
+  margin: 0;
+  margin-bottom: 40px; }
+
+.user-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: inline-flex; }
+  @media (min-width: 1260px) {
+    .user-list {
+      right: 20px; } }
+
+.user-list__item {
+  margin-right: 30px; }
+  .user-list__item:last-child {
+    margin-right: 0; }
+
+.log__title {
+  margin: 0;
+  margin-bottom: 20px; }
+
+.log__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 30px; }
+
+.user {
+  padding: 30px 10px 30px;
+  border: 2px solid #e2e2e2;
+  border-radius: 3px; }
+
+.user__option {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  color: #222222;
+  border-bottom: 2px solid #e2e2e2; }
+  .user__option:last-child {
+    margin-bottom: 0; }
+
+.user__name,
+.user__lastname,
+.user__reg-date {
+  font-weight: normal; }
+
+.user__name,
+.user__lastname {
+  text-transform: capitalize; }
+
+.user__remove:hover, .user__remove:focus {
+  background-color: #ff5252;
+  box-shadow: 0 0 0 2px #ff3939; }
+
+/*# sourceMappingURL=style.css.map */
