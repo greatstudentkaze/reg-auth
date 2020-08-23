@@ -1,0 +1,1 @@
+const authBtn = document.querySelector('.js-auth');
